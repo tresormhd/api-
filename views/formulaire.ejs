@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div  >
+        <h1>form d'enregistrements</h1>
+        <form action="/" method="POST">
+            <input type="number" name="value1" value="1" style="display:none" >
+            nom du produit : <input type="text" name="name" > <br>
+                <select name="catid">
+                    <% for(cat of categoties){ %>
+                        <option value="<%= cat._id %>"> <%= cat.nom %> </option>
+                    <% } %>
+                    
+                </select>
+            description : <input type="text" name="description"> <br>
+            prix : <input type="number" name="prix"> <br>
+            <input type="submit" value="enregistrer produits">
+    
+        </form>
+        <br><hr>
+        
+
+        <form action="/"  method="POST" >
+            <input type="number" name="value2" value="2" style="display:none" >
+            category: <input type="text" name="nom" > <br>
+            description : <input type="text" name="description"> <br>
+            <input type="submit" value="enregistrer category">
+
+        </form>
+
+    </div>
+    
+</body>
+</html>

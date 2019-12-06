@@ -1,23 +1,15 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = new express.Router;
 
-router.get('/',(req,res)=>{
-    res.json({
-        status:"l'API fonctionne",
-        message:" l'api fonctionne correctement et moi je suis content "
-    })
-})
+// const category = require('../controllers/category.controller.js')
+// const produit = require('../controllers/produits.controller.js')
 
-let userController = require('../controllers/user.controller')
 
-router.route('/User')
-    .get(userController.index)
-    .post(userController.new)
+// router.post('/user/create',User.create);
+// router.post('/user/find',User.find);
+// router.post('/user/find/post/:id', User.postsByUser);
+// // post routes
+// router.post('/post/create/:id', Post.create);
+// router.post('/post/populate/:id',Post.userByPost);
 
-router.route('/User/:user_id')
-    .get(userController.view)
-    .patch(userController.update)
-    .put(userController.update)
-    .delete(userController.delete)
-
-module.exports = router
+module.exports = router;
