@@ -13,12 +13,13 @@
         <form action="/" method="POST">
             <input type="number" name="value1" value="1" style="display:none" >
             nom du produit : <input type="text" name="name" > <br>
-                <select name="catid">
-                    <% for(cat of categoties){ %>
-                        <option value="<%= cat._id %>"> <%= cat.nom %> </option>
-                    <% } %>
-                    
-                </select>
+            category :    
+            <select name="catid">
+                <% for(cat of categoties){ %>
+                    <option value="<%= cat._id %>"> <%= cat.nom %> </option>
+                <% } %>
+                
+            </select><br>
             description : <input type="text" name="description"> <br>
             prix : <input type="number" name="prix"> <br>
             <input type="submit" value="enregistrer produits">
