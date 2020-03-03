@@ -30,6 +30,9 @@ let apiRoutes = require('./routes/index')
     app.use('/',(req,res)=>{
         res.render('index')
     })
+    app.use('/test', (req, res) => {
+        res.send("yo juste un test de github desktop")
+    })
     app.use('/APIConnect',apiRoutes)
 
     app.listen(port,()=> console.log('start on ' + port) )
